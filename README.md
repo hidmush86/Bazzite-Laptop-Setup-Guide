@@ -1,4 +1,7 @@
 # Bazzite Laptop Setup Guide
+
+This is my personal guide for configuring Bazzite on my HP Envy x 360 laptop. Meaning, your mileage may vary. :)
+
 ## CTRL + ALT Swap (MacOS Layout)
 Open 'Input Remapper' 
 - Devices Tab -> Select 'AT Translate Set 2 keyboard' (or your keyboard name)
@@ -14,6 +17,7 @@ Open 'Input Remapper'
 ## Software Center
 - Bitwarden
 - Thunderbird
+- Anydesk
 - Konsole
 - Moonlight
 - Parsec
@@ -101,18 +105,26 @@ python Updater.py --fonts
 ```
 
 
-## Docker
-[https://docs.docker.com/engine/install/fedora/](https://docs.docker.com/engine/install/fedora/)
-restart after installation:
-```bash
-shutdown -r now
-```
-
 ### Docker Compose / Docker Desktop
 [https://docs.docker.com/desktop/setup/install/linux/fedora/](https://docs.docker.com/desktop/setup/install/linux/fedora/)
 ```bash
+cd ~/Downloads
+sudo dnf install ./docker-desktop-x86_64.rpm
+systemctl reboot
 docker compose version
 #NOT NOT NOT docker-compose
+```
+### Uninstall Docker
+```
+sudo rpm-ostree uninstall docker-desktop
+systemctl reboot
+docker --version # check if docker is uninstalled
+```
+### 
+
+# Information about rpm-ostree
+```
+rpm-ostree status
 ```
 
 ## Node
@@ -124,6 +136,7 @@ docker compose version
 ```
  ujust install-lact 
 ```
+
 ## Waydroid
 ```
 ujust setup-waydroid
@@ -133,12 +146,14 @@ ujust setup-waydroid
 ## Screen Lock Graphics:
 ![alt text](image-1.png)
 
-## Xbox One S Controller
+## Xbox One S Controller not working fix (update controller):
 1. Log into windows machine
 2. Download Xbox Accessories from MS Store.
 3. Update Controller (DO NOT UNPLUG.)
-4. Back in Bazzite try pairing.
+4. Back in Bazzite, try pairing.
 
 ## Bugs
 - Changing other resolutions beside 1920x1080. Black Screen.
 - Log Out not working
+- Synergy Symless works but is pretty glitch
+- LACT does not see fans.
