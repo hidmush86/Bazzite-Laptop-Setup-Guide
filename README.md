@@ -62,6 +62,10 @@ alias dsize='sudo docker images --format "{{.Repository}}:{{.Tag}} {{.Size}}" | 
 alias DEV='cd ~/DEV'
 alias dev='cd ~/DEV'
 alias code='codium' 
+
+# --------------FastFetch----------------------
+fastfetch
+
 ```
 
 ## Icons
