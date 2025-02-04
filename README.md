@@ -19,6 +19,7 @@ Open 'Input Remapper'
 - Thunderbird
 - Anydesk
 - Konsole
+- Blender
 - Moonlight
 - Parsec
 - Space Cadet Pinball
@@ -27,6 +28,9 @@ Open 'Input Remapper'
 
 ## VSCodium
 [https://vscodium.com/](https://vscodium.com/)
+
+## DaVinci Resolve
+https://universal-blue.discourse.group/t/davinci-resolve-setup-guide/1197
 
 ## Icons
 ```bash
@@ -74,6 +78,7 @@ OnlyShowIn=KDE;
 Type=Link
 URL[$e]=file:///
 ```
+### Refrehs des
 
 ## Screenshots
 - Spectacle comes pre-installed
@@ -105,21 +110,31 @@ python Updater.py --fonts
 ```
 
 
-### Docker Compose / Docker Desktop
-[https://docs.docker.com/desktop/setup/install/linux/fedora/](https://docs.docker.com/desktop/setup/install/linux/fedora/)
+
+
+### Install Docker
 ```bash
-cd ~/Downloads
-sudo dnf install ./docker-desktop-x86_64.rpm
+ujust install-docker
+systemctl reboot 
+# not sure if this installs 'docker compose' or not.
+``` 
+
+### Install docker-compose (not sure if needed)
+```
+sudo rpm-ostree override replace docker-compose
 systemctl reboot
-docker compose version
-#NOT NOT NOT docker-compose
 ```
-### Uninstall Docker
+
+### Permanently Allow Docker Access to the Mounted Directory
+If a Docker container fails to access a mounted directory due to **SELinux restrictions**, follow these steps to resolve the issue.
+Apply the correct security context to the mounted directory:
+```bash
+sudo chcon -R -t svirt_sandbox_file_t <PATH_TO_MOUNTED_DOCKER_FOLDER>
+docker-compose down
+docker-compose up
+# check if the container is working correctly now
 ```
-sudo rpm-ostree uninstall docker-desktop
-systemctl reboot
-docker --version # check if docker is uninstalled
-```
+
 ### 
 
 # Information about rpm-ostree
