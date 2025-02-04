@@ -1,6 +1,7 @@
 # Bazzite Laptop Setup Guide
 
 This is my personal guide for configuring Bazzite on my HP Envy x 360 laptop. Meaning, your mileage may vary. :)
+![alt text](image-2.png)
 
 ## CTRL + ALT Swap (MacOS Layout)
 Open 'Input Remapper' 
