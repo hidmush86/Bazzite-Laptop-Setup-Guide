@@ -64,8 +64,8 @@ alias dev='cd ~/DEV'
 alias code='codium' 
 
 # --------------FastFetch----------------------
-fastfetch
-
+# fastfetch # default output
+fastfetch --logo-type sixel --logo /PATH_TO_IMAGE/example.jpg --logo-width 50 --logo-height 25 # output w/ custom image and sizing
 ```
 
 ## Icons
