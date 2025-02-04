@@ -26,11 +26,42 @@ Open 'Input Remapper'
 - Solitaire
 - KMines
 
+## Install package on Fedora
+`sudo dnf install ./package.rpm`
+
 ## VSCodium
 [https://vscodium.com/](https://vscodium.com/)
 
 ## DaVinci Resolve
-https://universal-blue.discourse.group/t/davinci-resolve-setup-guide/1197
+[DaVinci Resolve Setup Guide](https://universal-blue.discourse.group/t/davinci-resolve-setup-guide/1197)
+
+## Photopea
+[https://gitflic.ru/project/photopea-v2/photopea-v-2.git](https://gitflic.ru/project/photopea-v2/photopea-v-2.git)
+```bash
+git clone https://gitflic.ru/project/photopea-v2/photopea-v-2.git
+python Updater.py --fonts
+```
+
+## Helpful `.bashrc` commands:
+```bash
+sudo nano ~/.bashrc
+```
+```bash
+# ----------------DOCKER------------------------
+
+alias down='sudo docker compose down'
+alias up='sudo docker compose up'
+alias upf='sudo docker compose up --force-recreate'
+alias build='sudo docker compose build'
+alias buildnc='sudo docker compose build --no-cache'
+alias dsize='sudo docker images --format "{{.Repository}}:{{.Tag}} {{.Size}}" | sort -h -k2'
+
+# ----------------CODE------------------------
+
+alias DEV='cd ~/DEV'
+alias dev='cd ~/DEV'
+alias code='codium' 
+```
 
 ## Icons
 ```bash
@@ -44,15 +75,15 @@ sudo nano org.mozilla.firefox.desktop
 killall -SIGUSR1 plasmashell
 ```
 or 
-right click -> Open with... -> VSCodium
+right-click -> Open with... -> VSCodium
 
-### Add Trash Icon 
-for trash icon:
-```
+### Add Trash Icon
+For trash icon:
+```bash
 sudo nano ~/Desktop/trash.desktop
 ```
-paste this, save and exit nano:
-```
+Paste this, save, and exit nano:
+```ini
 [Desktop Entry]
 Name=Trash
 Comment=Contains removed files
@@ -62,13 +93,14 @@ Type=Link
 URL=trash:/
 OnlyShowIn=KDE;
 ```
+
 ### Add Computer Icon
-for computer icon:
-```
+For computer icon:
+```bash
 sudo nano ~/Desktop/computer.desktop
 ```
-paste this, save and exit nano:
-```
+Paste this, save, and exit nano:
+```ini
 [Desktop Entry]
 Comment=
 Icon=computer 
@@ -78,41 +110,33 @@ OnlyShowIn=KDE;
 Type=Link
 URL[$e]=file:///
 ```
-### Refrehs des
 
-## Screenshots
-- Spectacle comes pre-installed
+## Windows 98 Look
+[Classic Windows Style](https://www.reddit.com/r/unixporn/comments/11britw/kde_went_full_on_classic_windows_style/#lightbox)
+
+## Windows 98/95/KidPix/AIM Sounds
+[PengWin98 Sound Pack](https://github.com/hidmush86/PengWin98)
 
 ## Konsole
-### Shortcuts
+### Edit Shortcuts:
 ![alt text](image.png)
 
 ### Turn off Bazzite welcome screen:
 `ujust toggle-user-motd`
 
-## Windows 98 look
-[CLICK](https://www.reddit.com/r/unixporn/comments/11britw/kde_went_full_on_classic_windows_style/#lightbox)
-
 ## Steam
--> Right Click Game -> `Properties` -> `Compatibility` -> Checkbox `Force`
+Right Click Game -> `Properties` -> `Compatibility` -> Checkbox `Force`
+
+## Xbox One S Controller Not Working Fix (Update Controller)
+1. Log into Windows machine
+2. Download Xbox Accessories from MS Store.
+3. Update Controller (DO NOT UNPLUG.)
+4. Back in Bazzite, try pairing.
 
 ## Veracrypt
-[Fedora Downlload](https://www.veracrypt.fr/en/Downloads.html)
+[Fedora Download](https://www.veracrypt.fr/en/Downloads.html)
 
-## Install package on fedora
-`sudo dnf install  ./package.rpm`
-
-## Photopea:
-[https://gitflic.ru/project/photopea-v2/photopea-v-2.git](https://gitflic.ru/project/photopea-v2/photopea-v-2.git)
-```bash
-git clone https://gitflic.ru/project/photopea-v2/photopea-v-2.git
-python Updater.py --fonts
-```
-
-
-
-
-### Install Docker
+## Install Docker
 ```bash
 ujust install-docker
 systemctl reboot 
@@ -135,40 +159,35 @@ docker-compose up
 # check if the container is working correctly now
 ```
 
-### 
-
-# Information about rpm-ostree
-```
-rpm-ostree status
-```
-
-## Node
-```bash
- sudo dnf install nodejs
-```
-
-## LACT (fan control) (did not work)
-```
- ujust install-lact 
-```
-
 ## Waydroid
 ```
 ujust setup-waydroid
 ```
-[https://docs.waydro.id/faq/google-play-certification](https://docs.waydro.id/faq/google-play-certification)
+[Waydroid Play Certification](https://docs.waydro.id/faq/google-play-certification)
 
-## Screen Lock Graphics:
+## Node (npm, npx)
+```bash
+sudo dnf install nodejs
+```
+
+## Screenshots
+- Spectacle comes pre-installed
+
+## LACT (Fan Control) (Did Not Work)
+```bash
+ujust install-lact 
+```
+
+## Information about rpm-ostree
+```bash
+rpm-ostree status
+```
+
+## Screen Lock Graphics
 ![alt text](image-1.png)
 
-## Xbox One S Controller not working fix (update controller):
-1. Log into windows machine
-2. Download Xbox Accessories from MS Store.
-3. Update Controller (DO NOT UNPLUG.)
-4. Back in Bazzite, try pairing.
-
 ## Bugs
-- Changing other resolutions beside 1920x1080. Black Screen.
+- Changing other resolutions besides 1920x1080. Black Screen.
 - Log Out not working
-- Synergy Symless works but is pretty glitch
+- Synergy Symless works but is pretty glitchy.
 - LACT does not see fans.
