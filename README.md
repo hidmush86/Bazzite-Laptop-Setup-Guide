@@ -134,6 +134,9 @@ URL[$e]=file:///
 ## Windows 98/95/KidPix/AIM Sounds
 [PengWin98 Sound Pack](https://github.com/hidmush86/PengWin98)
 
+## Windows 98 Splash Screen
+[Pengwin98 Splash Screen](https://github.com/hidmush86/PengWin98-Splash-Screen)
+
 ## Konsole
 ### Edit Shortcuts:
 ![alt text](./guide-images/image.png)
