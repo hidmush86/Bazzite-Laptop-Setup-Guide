@@ -1,7 +1,7 @@
 # Bazzite Laptop Setup Guide
 
 This is my personal guide for configuring Bazzite on my HP Envy x 360 laptop. Meaning, your mileage may vary. :)
-![alt text](image-2.png)
+![alt text](./guide-images/image-2.png)
 
 ## CTRL + ALT Swap (MacOS Layout)
 Open 'Input Remapper' 
@@ -15,6 +15,12 @@ Open 'Input Remapper'
 - Turn on `Autoload`
 - Press save icon
 
+## Change computer's hostname
+```bash
+sudo hostnamectl # get current hostname
+sudo hostnamectl set-hostname <YOUR-NEW-HOSTNAME> # set new hostname
+
+```
 ## Software Center
 - Bitwarden
 - Thunderbird
@@ -26,6 +32,12 @@ Open 'Input Remapper'
 - Space Cadet Pinball
 - Solitaire
 - KMines
+
+## Librewolf
+```bash
+ curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+ rpm-ostree install librewolf
+```
 
 ## Install package on Fedora
 `sudo dnf install ./package.rpm`
@@ -124,7 +136,7 @@ URL[$e]=file:///
 
 ## Konsole
 ### Edit Shortcuts:
-![alt text](image.png)
+![alt text](./guide-images/image.png)
 
 ### Turn off Bazzite welcome screen:
 `ujust toggle-user-motd`
@@ -189,7 +201,7 @@ rpm-ostree status
 ```
 
 ## Screen Lock Graphics
-![alt text](image-1.png)
+![alt text](./guide-images/image-1.png)
 
 ## Bugs
 - Changing other resolutions besides 1920x1080. Black Screen.
